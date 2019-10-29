@@ -1,0 +1,10 @@
+body{
+    background:#577284;
+}
+.thumbnail img{
+    width:100%;
+
+}
+#delete-form{
+    display: inline;
+}
