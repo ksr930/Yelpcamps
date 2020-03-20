@@ -1,15 +1,25 @@
 <% include ../partials/header %>
 
-<h1>register</h1>
+<div class="bg-light ">
+    <h1>Register</h1>
 
-<form action="/register" method='POST'>
+    <div class="form-group bg-primary" style="width:40%; margin-left:30%; text-align:center;">
+        <form action="/register" method='POST'>
+            <label>USERNAME</label>
+            <input class='form-control' type="text" name="username" placeholder="username">
+            <label>PASSWORD</label>
+            <input class="form-control" type="password" name="password" placeholder="password">
+            <input class='form-control' type="submit" value="Register">
+        </form>
+    </div>
 
-    <input type="text" name="username" placeholder="username">
-    <input type="password" name="password" placeholder="password">
-    <button>Submit</button>
-</form>
-<li><a href='/register'>signup</a></li>
-<li><a href="/logout">Logout!</a></li>
-<li><a href="/login">Login</a></li>
+
+    <li><a href='/register'>signup</a></li>
+    <li><a href="/logout">Logout!</a></li>
+    <li><a href="/login">Login</a></li>
+
+
+
+</div>
 
 <% include ../partials/footer %>

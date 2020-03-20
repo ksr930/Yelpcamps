@@ -1,5 +1,7 @@
 body{
-    background:#577284;
+ border:0px;
+ padding:0px;
+ margin:0px;
 }
 .thumbnail img{
     width:100%;
