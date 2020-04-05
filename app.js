@@ -20,7 +20,9 @@ app.use(methodoverride("_method"))
 // seed()
 // var comment = require("./modules/comments");
 // var users = require("./modules/users");
-mongoose.connect("mongodb://localhost/yelpcamp", { useNewUrlParser: true }, (err) => {
+const uri =
+  "mongodb+srv://Karan:jGkwRahfbQKPU9lJ@cluster0-tw9nf.mongodb.net/test?retryWrites=true&w=majority";
+mongoose.connect(uri, { useNewUrlParser: true }, (err) => {
     if (!err) { console.log("mongodb connected") }
     else {
         console.log("not connected")
