@@ -20,18 +20,19 @@ app.use(methodoverride("_method"))
 // seed()
 // var comment = require("./modules/comments");
 // var users = require("./modules/users");
-const uri =
-  "mongodb+srv://Karan:jGkwRahfbQKPU9lJ@cluster0-tw9nf.mongodb.net/test?retryWrites=true&w=majority";
-mongoose.connect(uri, { useNewUrlParser: true }, (err) => {
-    if (!err) { console.log("mongodb connected") }
-    else {
-        console.log("not connected")
-    }
-}
+// const uri =
+//   "mongodb+srv://Karan:jGkwRahfbQKPU9lJ@cluster0-tw9nf.mongodb.net/test?retryWrites=true&w=majority";
 
-);
+// mongoose
+//   .connect(uri, { dbName: "yelpcamp" })
+//   .then(() => {
+//     console.log("connected");
+//   })
+//   .catch(err => {
+//     console.log(err);
+//   });
 
-
+mongoose.connect(process.env.DATABASEURL);
 
 
 
