@@ -31,8 +31,8 @@ app.use(methodoverride("_method"))
 //   .catch(err => {
 //     console.log(err);
 //   });
-
-mongoose.connect(process.env.DATABASEURL);
+const uri=process.env.DATABASEURL||'mongodb+srv://Karan:jGkwRahfbQKPU9lJ@cluster0-tw9nf.mongodb.net/test?retryWrites=true&w=majority'
+mongoose.connect(uri);
 
 
 
@@ -75,8 +75,8 @@ function isloggedin(req, res, next) {
     }
     res.redirect("/login");
 }
-
-app.listen(process.env.PORT, process.env.IP, function() {
+const port = process.env.PORT||3000;
+app.listen(port, process.env.IP, function() {
   console.log("server run");
 });
 
