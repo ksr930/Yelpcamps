@@ -75,7 +75,7 @@ function isloggedin(req, res, next) {
     res.redirect("/login");
 }
 
-app.listen(3000,function(){
-    console.log("server run")
-})
+app.listen(process.env.PORT, process.env.IP, function() {
+  console.log("server run");
+});
 
