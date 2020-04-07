@@ -34,7 +34,7 @@ app.use(methodoverride("_method"))
 // const uri ="mongodb+srv://karan:Karan@123@cluster0-rcsub.mongodb.net/test?retryWrites=true&w=majority"
 
 
-var uri =process.env.MONGODB_USER;
+var uri =process.env.MONGODB_URI||'mongodb+srv://ksr:zTdSVqDv7DdCrsBg@cluster0-rcsub.mongodb.net/test?retryWrites=true&w=majority'
 
 mongoose.connect(uri)
 
