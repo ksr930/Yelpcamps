@@ -17,21 +17,6 @@ User = require("./modules/user")
 
 app.use(flash());
 app.use(methodoverride("_method"))
-// seed()
-// var comment = require("./modules/comments");
-// var users = require("./modules/users");
-// const uri =
-//   "mongodb+srv://Karan:jGkwRahfbQKPU9lJ@cluster0-tw9nf.mongodb.net/test?retryWrites=true&w=majority";
-
-// mongoose
-//   .connect(uri, { dbName: "yelpcamp" })
-//   .then(() => {
-//     console.log("connected");
-//   })
-//   .catch(err => {
-//     console.log(err);
-// //   });
-// const uri ="mongodb+srv://karan:Karan@123@cluster0-rcsub.mongodb.net/test?retryWrites=true&w=majority"
 
 
 var uri =process.env.MONGODB_URI;
