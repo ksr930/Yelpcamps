@@ -30,10 +30,19 @@ app.use(methodoverride("_method"))
 //   })
 //   .catch(err => {
 //     console.log(err);
-//   });
-const uri=process.env.DATABASEURL||'mongodb+srv://Karan:jGkwRahfbQKPU9lJ@cluster0-tw9nf.mongodb.net/test?retryWrites=true&w=majority'
-mongoose.connect(uri);
+// //   });
+// const uri ="mongodb+srv://karan:Karan@123@cluster0-rcsub.mongodb.net/test?retryWrites=true&w=majority"
 
+
+var uri ='mongodb+srv://ksr:zTdSVqDv7DdCrsBg@cluster0-rcsub.mongodb.net/test?retryWrites=true&w=majority'
+
+mongoose.connect(uri)
+.then(() => {
+     console.log("connected");
+  })
+  .catch(err => {
+    console.log(err);
+  });
 
 
 app.use(require('express-session')({
