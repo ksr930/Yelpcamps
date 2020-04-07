@@ -37,12 +37,6 @@ app.use(methodoverride("_method"))
 var uri ='mongodb+srv://ksr:zTdSVqDv7DdCrsBg@cluster0-rcsub.mongodb.net/test?retryWrites=true&w=majority'
 
 mongoose.connect(uri)
-.then(() => {
-     console.log("connected");
-  })
-  .catch(err => {
-    console.log(err);
-  });
 
 
 app.use(require('express-session')({
