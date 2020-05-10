@@ -21,13 +21,7 @@ app.use(methodoverride("_method"))
 
 var uri =process.env.MONGODB_URI;
 
-mongoose.connect("mongodb://localhost/yelpcamp", { useNewUrlParser: true }, (err) => {
-    if (!err) { console.log("mongodb connected") }
-    else {
-        console.log("not connected")
-    }
-})
-
+mongoose.connect(uri)
 
 app.use(require('express-session')({
     secret: "ksr",
